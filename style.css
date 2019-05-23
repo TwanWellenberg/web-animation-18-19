@@ -1,0 +1,528 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.gradient {
+  background: linear-gradient(270deg, #000000, #8b0000, #000000, #8b0000, #000000);
+ background-size: 1000% 1000%;
+ -webkit-animation: AnimationName 15s ease infinite;
+}
+
+.touw {
+  animation: touw 1.2s cubic-bezier(.65, -0.14, 1, 1) forwards;
+}
+
+.circle, .circle2{
+  transition: all 500ms ease-out;
+}
+
+.wrapper1 .midden {
+  transform: translate(33px, 15px);
+  background-color: red;
+}
+
+.eyeshadow {
+  box-shadow: 0px 0px 60px 30px red;
+  transition: all 500ms ease-out;
+}
+
+/* Keyframes komen hier */
+
+@keyframes blooddrop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 800px;
+  }
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes eyeopen {
+  0% {border-radius: 100% 0px;}
+  50% {border-radius: 100% 150px;}
+  100% {border-radius: 100% 0px;}
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes touw {
+  0% {top: -20%}
+  50% {top: -10%}
+  100% {top: -60%}
+}
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: translateY(0px) rotateX(0);
+    color: red;
+    font-size: 100px;
+  }
+  50% {font-size: 200px;
+    -webkit-transform: translateY(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px) rotateX(-360deg);
+    color: white;
+    font-size: 100px;
+  }
+}
+
+/* Alles om responsive te maken */
+
+@media (max-width: 659px) {
+  .wrapper2 {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 4em;
+  }
+
+  .wrapper1 {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: -4em;
+  }
+
+  .circle {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .circle2 {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 100%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .eye-shape1 {
+    margin: 0 auto;
+    width: 95px;
+    height: 95px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .eye-shape2 {
+    margin: 0 auto;
+    width: 95px;
+    height: 95px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .drop {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 2.5s cubic-bezier(.66,.21,.37,.89) infinite;
+  }
+
+  .drop1 {
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    width: 73px;
+    height: 73px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.3s cubic-bezier(.59,.25,.43,.85) infinite;
+  }
+
+  .drop2 {
+    position: absolute;
+    top: 150px;
+    left: 700px;
+    width: 65px;
+    height: 65px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.1s cubic-bezier(.56,.3,.46,.77) infinite;
+  }
+
+  .drop3 {
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.5s cubic-bezier(.64,.22,.42,.89) infinite;
+  }
+
+  .drop4 {
+    position: absolute;
+    top: 150px;
+    left: 1200px;
+    width: 60px;
+    height: 60px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3s cubic-bezier(.55,.3,.5,.83) infinite;
+  }
+
+  .Titel {
+    color: white;
+    font-size: 100px;
+    font-family: "impact";
+    font-weight:   900;
+      text-align: center;
+      margin-top: 50px;
+      animation: slidein 2s 1 cubic-bezier(.65, 0.24, .47, 1.37) forwards;
+    }
+
+    .titelfliperino {
+      -webkit-animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+      transition: all 500ms ease-out;
+      }
+
+  .titelbox {
+    margin-top: 400px;
+  }
+
+  #Laag_1 {
+  position: absolute;
+  top: -20%;
+  left: 70%;
+  height: 600px;
+  }
+}
+
+
+@media (min-width: 660px)
+    and (max-width: 1023px) {
+  .wrapper2 {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10%;
+  }
+
+  .wrapper1 {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -10%;
+  }
+
+  .circle {
+    height: 110px;
+    width: 110px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -2%;
+    margin-left: 1%;
+  }
+
+  .circle2 {
+    height: 110px;
+    width: 110px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 35.5%;
+    margin-top: -2%;
+  }
+
+  .eye-shape1 {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .eye-shape2 {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .drop {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 2.5s cubic-bezier(.66,.21,.37,.89) infinite;
+  }
+
+  .drop1 {
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    width: 73px;
+    height: 73px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.3s cubic-bezier(.59,.25,.43,.85) infinite;
+  }
+
+  .drop2 {
+    position: absolute;
+    top: 150px;
+    left: 700px;
+    width: 65px;
+    height: 65px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.1s cubic-bezier(.56,.3,.46,.77) infinite;
+  }
+
+  .drop3 {
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.5s cubic-bezier(.64,.22,.42,.89) infinite;
+  }
+
+  .drop4 {
+    position: absolute;
+    top: 150px;
+    left: 1200px;
+    width: 60px;
+    height: 60px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3s cubic-bezier(.55,.3,.5,.83) infinite;
+  }
+
+  .Titel {
+    color: white;
+    font-size: 100px;
+    font-family: "impact";
+    font-weight:   900;
+      text-align: center;
+      margin-top: 50px;
+      animation: slidein 2s 1 cubic-bezier(.65, 0.24, .47, 1.37) forwards;
+    }
+
+    .titelfliperino {
+      -webkit-animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+      transition: all 500ms ease-out;
+      }
+
+  .titelbox {
+    margin-top: 400px;
+  }
+
+  #Laag_1 {
+  position: absolute;
+  top: -20%;
+  left: 70%;
+  height: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper2 {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10%;
+  }
+
+  .wrapper1 {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -10%;
+  }
+
+  .circle {
+    height: 110px;
+    width: 110px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: -2%;
+    margin-left: 1%;
+  }
+
+  .circle2 {
+    height: 110px;
+    width: 110px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 35.5%;
+    margin-top: -2%;
+  }
+
+  .eye-shape1 {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .eye-shape2 {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(45deg);
+    animation: eyeopen 2s;
+  }
+
+  .drop {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 2.5s cubic-bezier(.66,.21,.37,.89) infinite;
+  }
+
+  .drop1 {
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    width: 73px;
+    height: 73px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.3s cubic-bezier(.59,.25,.43,.85) infinite;
+  }
+
+  .drop2 {
+    position: absolute;
+    top: 150px;
+    left: 700px;
+    width: 65px;
+    height: 65px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.1s cubic-bezier(.56,.3,.46,.77) infinite;
+  }
+
+  .drop3 {
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+    width: 70px;
+    height: 70px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3.5s cubic-bezier(.64,.22,.42,.89) infinite;
+  }
+
+  .drop4 {
+    position: absolute;
+    top: 150px;
+    left: 1200px;
+    width: 60px;
+    height: 60px;
+    background: #AA0000;
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    border-radius: 145% 0 145% 120%;
+    animation: blooddrop 3s cubic-bezier(.55,.3,.5,.83) infinite;
+  }
+
+  .Titel {
+    color: white;
+    font-size: 100px;
+    font-family: "impact";
+    font-weight:   900;
+      text-align: center;
+      margin-top: 50px;
+      animation: slidein 2s 1 cubic-bezier(.65, 0.24, .47, 1.37) forwards;
+    }
+
+    .titelfliperino {
+      -webkit-animation: flip-horizontal-bottom 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+      transition: all 500ms ease-out;
+      }
+
+  .titelbox {
+    margin-top: 400px;
+  }
+
+  #Laag_1 {
+  position: absolute;
+  top: -20%;
+  left: 70%;
+  height: 600px;
+  }
+}
